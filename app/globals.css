@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink bg-halo text-snow antialiased;
+  background-attachment: fixed;
+}
+
+a {
+  @apply transition-colors duration-200;
+}
+
+input,
+select,
+textarea {
+  @apply bg-navy-2 text-snow placeholder:text-fog;
+}
+
+.shell {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.panel {
+  @apply rounded-2xl border border-line/80 bg-navy/90 shadow-soft backdrop-blur;
+}
+
+.button-primary {
+  @apply inline-flex items-center justify-center rounded-xl bg-brand px-4 py-2.5 text-sm font-medium text-white shadow-glow transition hover:bg-glow;
+}
+
+.button-secondary {
+  @apply inline-flex items-center justify-center rounded-xl border border-brand/70 px-4 py-2.5 text-sm font-medium text-snow transition hover:border-glow hover:text-white;
+}
+
+.field {
+  @apply w-full rounded-xl border border-line bg-navy-2 px-3 py-2.5 text-sm outline-none ring-0 transition placeholder:text-fog focus:border-glow;
+}
+
+.grid-calendar {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
